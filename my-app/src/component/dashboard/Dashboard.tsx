@@ -4,6 +4,7 @@ import GetApplicationsApi from "../../api/GetApplicationsApi";
 
 export default function Dashboarad(){
 const [applicationData, setApplicationData] = useState<any>();
+const [applicationDatae, setApplicationDatae] = useState<any>();
 
     const getApplications = async () => {
         const resp = await GetApplicationsApi();
@@ -20,7 +21,7 @@ const [applicationData, setApplicationData] = useState<any>();
         <h2>dashboard page</h2>
         {applicationData?.map((x: any) => (
             <h2>{x.name}</h2>
-        ))}
+        ))} 
     </>
     )
 }
